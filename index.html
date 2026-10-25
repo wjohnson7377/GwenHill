@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#121917" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#eceef0" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f141c" media="(prefers-color-scheme: dark)" />
   <link rel="icon" href="data:," />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,36 +14,36 @@
   <style>
     :root {
       color-scheme: light dark;
-      --paper: #f3f0e8;
-      --surface: #fffdf8;
-      --surface-2: #e8e4da;
-      --ink: #17201d;
-      --muted: #53605b;
-      --line: #c9c4b9;
-      --green: #0b6b53;
-      --green-dark: #074b3b;
-      --green-soft: #d5eadf;
-      --orange: #e7652f;
-      --orange-soft: #f5d7c8;
-      --yellow: #f1c94f;
-      --shadow: 0 18px 44px rgba(38, 50, 45, .1);
+      --paper: #eceef0;
+      --surface: #fcfdfe;
+      --surface-2: #dde1e6;
+      --ink: #182234;
+      --muted: #5b6673;
+      --line: #c2c9d1;
+      --green: #1e4fa3;
+      --green-dark: #13356f;
+      --green-soft: #d9e5f6;
+      --orange: #d99e06;
+      --orange-soft: #f6e7ba;
+      --yellow: #e3a50d;
+      --shadow: 0 18px 44px rgba(24, 42, 74, .12);
       --radius-lg: 28px;
       --radius-md: 16px;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --paper: #121917;
-        --surface: #19221f;
-        --surface-2: #24302c;
-        --ink: #f4f0e7;
-        --muted: #bdc7c2;
-        --line: #3a4944;
-        --green: #63c9a4;
-        --green-dark: #a7ead1;
-        --green-soft: #173f33;
-        --orange: #ff9364;
-        --orange-soft: #4d2e22;
-        --yellow: #e8c95d;
+        --paper: #0f141c;
+        --surface: #171f2b;
+        --surface-2: #242f40;
+        --ink: #eef1f6;
+        --muted: #a9b3c0;
+        --line: #39434f;
+        --green: #7ea9f2;
+        --green-dark: #bcd4fa;
+        --green-soft: #1d2f52;
+        --orange: #e0aa1e;
+        --orange-soft: #4a3a10;
+        --yellow: #eebd45;
         --shadow: 0 18px 44px rgba(0, 0, 0, .28);
       }
     }
@@ -77,10 +77,10 @@
     .utility-right { display: flex; align-items: center; gap: 16px; }
     .kofi-btn {
       display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; font-size: .92rem;
-      background: var(--orange); color: #fffdf8; padding: 10px 18px; border-radius: 999px; white-space: nowrap;
+      background: var(--orange); color: #26200a; padding: 10px 18px; border-radius: 999px; white-space: nowrap;
       transition: filter .15s ease;
     }
-    @media (prefers-color-scheme: dark) { .kofi-btn { color: #12211c; } }
+    @media (prefers-color-scheme: dark) { .kofi-btn { color: #26200a; } }
     .kofi-btn:hover { filter: brightness(1.08); }
     .kofi-btn svg { width: 17px; height: 17px; flex: 0 0 17px; }
     .hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr); gap: 64px; align-items: end; }
@@ -90,8 +90,8 @@
       line-height: .89; letter-spacing: -.045em; font-weight: 650; margin-bottom: 28px;
     }
     .hero-copy { font-size: clamp(1.05rem, 1.6vw, 1.28rem); line-height: 1.58; max-width: 650px; color: var(--muted); margin-bottom: 0; }
-    .quick-card { background: var(--green-dark); color: #fffdf8; padding: 28px; border-radius: 12px 36px 12px 12px; box-shadow: var(--shadow); position: relative; }
-    @media (prefers-color-scheme: dark) { .quick-card { color: #12211c; } }
+    .quick-card { background: var(--green-dark); color: #ffffff; padding: 28px; border-radius: 12px 36px 12px 12px; box-shadow: var(--shadow); position: relative; }
+    @media (prefers-color-scheme: dark) { .quick-card { color: #0f1a2e; } }
     .quick-card::before { content: ""; width: 14px; height: 14px; border-radius: 50%; background: var(--orange); position: absolute; right: 24px; top: 24px; }
     .quick-card strong { display: block; font-family: "Newsreader", serif; font-size: 1.55rem; margin-bottom: 12px; }
     .quick-card p { opacity: .86; line-height: 1.55; margin-bottom: 22px; }
@@ -121,6 +121,14 @@
     }
     .chip:hover { border-color: var(--green); }
     .chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .spanish-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding-bottom: 30px; }
+    .spanish-toggle { display: inline-flex; align-items: center; gap: 11px; border: 1.5px solid var(--green); background: var(--green-soft); color: var(--green-dark); border-radius: 999px; padding: 9px 18px 9px 10px; cursor: pointer; font-weight: 700; transition: background .15s ease, color .15s ease; }
+    .spanish-toggle .switch { width: 40px; height: 22px; border-radius: 999px; background: var(--surface); border: 1px solid var(--green); position: relative; flex: 0 0 40px; }
+    .spanish-toggle .knob { position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--green); transition: transform .15s ease, background .15s ease; }
+    .spanish-toggle[aria-pressed="true"] { background: var(--green); color: #ffffff; }
+    @media (prefers-color-scheme: dark) { .spanish-toggle[aria-pressed="true"] { color: #0f1a2e; } }
+    .spanish-toggle[aria-pressed="true"] .knob { transform: translateX(18px); background: var(--surface); }
+    .spanish-note { color: var(--muted); font-size: .9rem; }
 
     .results { padding: 44px 0 68px; }
     .resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
@@ -132,7 +140,7 @@
     .resource[data-category="training"] { --accent: var(--green); }
     .resource[data-category="jobs"] { --accent: var(--yellow); }
     .resource[data-category="food"] { --accent: var(--orange); }
-    .resource[data-category="essentials"] { --accent: #4087a8; }
+    .resource[data-category="essentials"] { --accent: #6f9bd8; }
     .card-top { display: flex; justify-content: space-between; gap: 18px; align-items: flex-start; }
     .mini-icon { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; flex: 0 0 44px; background: var(--green-soft); color: var(--green-dark); }
     .mini-icon svg { width: 21px; height: 21px; }
@@ -147,8 +155,8 @@
     .empty { display: none; text-align: center; padding: 50px 20px 70px; color: var(--muted); }
     .empty strong { display: block; color: var(--ink); font-family: "Newsreader", serif; font-size: 1.8rem; margin-bottom: 8px; }
 
-    .steps { background: var(--green-dark); color: #fffdf8; padding: 70px 0; }
-    @media (prefers-color-scheme: dark) { .steps { color: #12211c; } }
+    .steps { background: var(--green-dark); color: #ffffff; padding: 70px 0; }
+    @media (prefers-color-scheme: dark) { .steps { color: #0f1a2e; } }
     .steps-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; }
     .steps h2 { font-family: "Newsreader", serif; font-size: clamp(2.4rem, 4.5vw, 4rem); line-height: .98; margin-bottom: 18px; }
     .steps-intro { opacity: .82; line-height: 1.6; }
@@ -158,6 +166,31 @@
     .step-num { font-family: "Newsreader", serif; font-size: 2rem; opacity: .65; }
     .step strong { display: block; font-size: 1.06rem; margin-bottom: 6px; }
     .step p { margin-bottom: 0; opacity: .78; line-height: 1.5; }
+
+    .nav-link { color: var(--green); font-weight: 700; font-size: .92rem; text-decoration: none; white-space: nowrap; }
+    .nav-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+    .contact { padding: 64px 0 70px; }
+    .contact h2 { font-family: "Newsreader", serif; font-size: clamp(2.2rem, 4vw, 3.5rem); line-height: 1; letter-spacing: -.025em; margin-bottom: 8px; }
+    .contact-intro { color: var(--muted); line-height: 1.5; max-width: 620px; margin-bottom: 30px; }
+    .contact-form { max-width: 640px; display: grid; gap: 20px; }
+    .field label { display: block; font-weight: 700; font-size: .92rem; margin-bottom: 8px; }
+    .field input, .field select {
+      font: inherit; width: 100%; min-height: 52px; background: var(--surface); color: var(--ink);
+      border: 1px solid var(--line); border-radius: 12px; padding: 0 16px; outline: none;
+    }
+    .field select { appearance: auto; }
+    .field input:focus, .field select:focus { border-color: var(--green); box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 18%, transparent); }
+    .contact-submit {
+      justify-self: start; border: 0; cursor: pointer; background: var(--orange); color: #26200a; font-weight: 700;
+      padding: 13px 26px; border-radius: 999px; transition: filter .15s ease;
+    }
+    .contact-submit:hover { filter: brightness(1.08); }
+
+    .thanks { padding: 90px 0 110px; text-align: center; }
+    .thanks h2 { font-family: "Newsreader", serif; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1; letter-spacing: -.025em; margin-bottom: 16px; }
+    .thanks p { color: var(--muted); font-size: 1.12rem; line-height: 1.6; max-width: 560px; margin: 0 auto 28px; }
+    .thanks .card-link { margin: 0 auto; }
 
     footer { padding: 34px 0 46px; color: var(--muted); font-size: .84rem; }
     .footer-grid { display: flex; justify-content: space-between; gap: 28px; align-items: flex-start; }
@@ -199,9 +232,16 @@
 </head>
 <body>
   <a class="skip-link" href="#resources">Skip to resources</a>
+  <div class="thanks" id="thanksView" hidden>
+    <div class="wrap">
+      <h2>Thank you</h2>
+      <p>Thank you for your information! Please allow up to 24 hours for a response.</p>
+      <a class="card-link" href="https://gwenhill.pages.dev/">Back to the resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
+    </div>
+  </div>
   <header class="hero">
     <div class="wrap">
-      <div class="utility-row"><span class="site-name">GwenHill Resource Center</span><span class="utility-right"><span class="reviewed">Starting with Houston + Texas</span><a class="kofi-btn" href="https://ko-fi.com/gwenhill" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>Support this hub</a></span></div>
+      <div class="utility-row"><span class="site-name">GwenHill Resource Center</span><span class="utility-right"><a class="nav-link" href="#contact">Contact Us</a><span class="reviewed">Starting with Houston + Texas</span><a class="kofi-btn" href="https://ko-fi.com/gwenhill" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>Support this hub</a></span></div>
       <div class="hero-grid">
         <div>
           <h1>What do you need help with today?</h1>
@@ -244,6 +284,11 @@
           <button class="chip" type="button" data-filter="jobs" aria-pressed="false">Jobs & paid experience</button>
           <button class="chip" type="button" data-filter="food" aria-pressed="false">Food</button>
           <button class="chip" type="button" data-filter="essentials" aria-pressed="false">Bills & essentials</button>
+        </div>
+        <p class="filter-label">Filter by language</p>
+        <div class="spanish-row">
+          <button class="spanish-toggle" id="spanishToggle" type="button" aria-pressed="false"><span class="switch" aria-hidden="true"><span class="knob"></span></span>En Español — Spanish-language help</button>
+          <span class="spanish-note">Show only the resources that offer help in Spanish.</span>
         </div>
       </div>
     </section>
@@ -293,21 +338,21 @@
             <a class="card-link" href="https://serhouston.org" target="_blank" rel="noopener">Explore SERJobs services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="training" data-search="workforce solutions training education scholarship tuition books career healthcare energy construction manufacturing technology gulf coast">
+          <article class="resource" data-spanish="true" data-category="training" data-search="workforce solutions training education scholarship tuition books career healthcare energy construction manufacturing technology gulf coast">
             <div class="card-top"><div class="tags"><span class="tag">Gulf Coast</span><span class="tag">Eligibility applies</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div></div>
             <h3>Career training scholarships</h3>
             <p>Workforce Solutions–Gulf Coast helps eligible job seekers explore career paths and may fund approved education or training costs.</p>
             <a class="card-link" href="https://wrksolutions.com/job-seekers/career-development-and-training/training-and-education-scholarships" target="_blank" rel="noopener">Check scholarship steps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="jobs" data-search="hire gulf coast youth 14 24 paid internship work experience scholarship training career">
+          <article class="resource" data-spanish="true" data-category="jobs" data-search="hire gulf coast youth 14 24 paid internship work experience scholarship training career">
             <div class="card-top"><div class="tags"><span class="tag">Ages 14–24</span><span class="tag">Paid experience</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div></div>
             <h3>Hire Gulf Coast Youth</h3>
             <p>Career exploration, paid work experience and possible training scholarships for young people across the Gulf Coast region.</p>
             <a class="card-link" href="https://wrksolutions.com/job-seekers/hire-gulf-coast-youth" target="_blank" rel="noopener">Explore youth programs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="training jobs" data-search="registered apprenticeship paid work learn credential debt free healthcare construction it manufacturing transportation gulf coast">
+          <article class="resource" data-spanish="true" data-category="training jobs" data-search="registered apprenticeship paid work learn credential debt free healthcare construction it manufacturing transportation gulf coast">
             <div class="card-top"><div class="tags"><span class="tag">Earn while learning</span><span class="tag">Gulf Coast</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5-5L7.4 3.6l3 3 2.3-2.3a4 4 0 0 0 2 2z"/><path d="m5 11-3 3 8 8 3-3"/><path d="m13 19 6-6"/><path d="m16 16 4 4"/></svg></div></div>
             <h3>Registered apprenticeships</h3>
             <p>Paid, on-the-job training paired with classroom learning and a recognized credential. Options span skilled trades, healthcare, technology and more.</p>
@@ -335,35 +380,35 @@
             <a class="card-link" href="https://iectxgulfcoast.org/membership/apprenticeship/" target="_blank" rel="noopener">Explore the apprenticeship <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="training" data-search="adult education literacy ged english esl math reading writing college preparation free texas twc">
+          <article class="resource" data-spanish="true" data-category="training" data-search="adult education literacy ged english esl math reading writing college preparation free texas twc">
             <div class="card-top"><div class="tags"><span class="tag">Texas-wide</span><span class="tag">No cost</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div></div>
             <h3>Adult education & literacy</h3>
             <p>Texas Workforce Commission partners offer no-cost reading, writing, math and English classes, plus high-school-equivalency, digital skills and college-prep support.</p>
             <a class="card-link" href="https://www.twc.texas.gov/services/job-training" target="_blank" rel="noopener">Learn about Texas AEL <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="jobs" data-search="free job search resume interview networking online learning workforce solutions workintexas tutorial">
+          <article class="resource" data-spanish="true" data-category="jobs" data-search="free job search resume interview networking online learning workforce solutions workintexas tutorial">
             <div class="card-top"><div class="tags"><span class="tag">Online</span><span class="tag">Free</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg></div></div>
             <h3>Job-search learning center</h3>
             <p>On-demand help with résumés, interviews, networking and job-search strategy from Workforce Solutions–Gulf Coast.</p>
             <a class="card-link" href="https://wrksolutions.com/job-seekers/career-development-and-training/online-learning" target="_blank" rel="noopener">Open free lessons <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="jobs" data-search="workintexas official texas job board texas workforce commission jobs openings resume employer matching free job seekers statewide">
+          <article class="resource" data-spanish="true" data-category="jobs" data-search="workintexas official texas job board texas workforce commission jobs openings resume employer matching free job seekers statewide">
             <div class="card-top"><div class="tags"><span class="tag">Texas-wide</span><span class="tag">Free to use</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div></div>
             <h3>WorkInTexas — official Texas job board</h3>
             <p>Texas's official state job board, run by the Texas Workforce Commission. Search over a million current job openings statewide, build a résumé, and get matched with employers — registration is free for job seekers.</p>
             <a class="card-link" href="https://www.workintexas.com/" target="_blank" rel="noopener">Search Texas jobs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="training" data-search="fema independent study emergency management institute free self paced online courses certificates continuing education units ceu public">
+          <article class="resource" data-spanish="true" data-category="training" data-search="fema independent study emergency management institute free self paced online courses certificates continuing education units ceu public">
             <div class="card-top"><div class="tags"><span class="tag">Self-paced</span><span class="tag">Certificates</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div></div>
             <h3>FEMA Independent Study — free courses &amp; certificates</h3>
             <p>FEMA's Emergency Management Institute offers 200+ free self-paced online courses open to the general public — earn a certificate and continuing education units for each course you complete.</p>
             <a class="card-link" href="https://training.fema.gov/is/" target="_blank" rel="noopener">Explore FEMA courses <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="food" data-search="houston food bank pantry map meals food assistance zip code tefap groceries">
+          <article class="resource" data-spanish="true" data-category="food" data-search="houston food bank pantry map meals food assistance zip code tefap groceries">
             <div class="card-top"><div class="tags"><span class="tag">Houston area</span><span class="tag">Food help</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/><path d="M9 12h6M12 9v6"/></svg></div></div>
             <h3>Houston Food Bank locator</h3>
             <p>Search nearby food pantries, meal programs and distribution partners by ZIP code. Confirm hours and requirements before visiting.</p>
@@ -391,49 +436,49 @@
             <a class="card-link" href="https://secondservingshouston.org/" target="_blank" rel="noopener">Visit Second Servings <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="essentials food" data-search="211 texas rent utilities prescriptions snap tanf medicaid chip housing childcare senior services food pantry disaster">
+          <article class="resource" data-spanish="true" data-category="essentials food" data-search="211 texas rent utilities prescriptions snap tanf medicaid chip housing childcare senior services food pantry disaster">
             <div class="card-top"><div class="tags"><span class="tag">Texas-wide</span><span class="tag">Many needs</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 9h8M8 13h5"/></svg></div></div>
             <h3>2-1-1 Texas</h3>
             <p>One starting point for local food, rent, utility, prescription, housing, childcare and benefit assistance. Call 2-1-1 to speak with a specialist.</p>
             <a class="card-link" href="https://www.hhs.texas.gov/services/safety/2-1-1-disaster-assistance" target="_blank" rel="noopener">See how 2-1-1 helps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="essentials" data-search="everyoneon low cost internet affordable computers zip code lifeline federal discount digital learning resources national digital inclusion nonprofit home broadband">
+          <article class="resource" data-spanish="true" data-category="essentials" data-search="everyoneon low cost internet affordable computers zip code lifeline federal discount digital learning resources national digital inclusion nonprofit home broadband">
             <div class="card-top"><div class="tags"><span class="tag">Nationwide</span><span class="tag">Internet &amp; computers</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg></div></div>
             <h3>EveryoneOn — low-cost internet &amp; computers</h3>
             <p>Find low-cost home internet offers and affordable computers by ZIP code from the national digital-inclusion nonprofit — includes the federal Lifeline discount and free digital-learning resources.</p>
             <a class="card-link" href="https://www.everyoneon.org/find-offers" target="_blank" rel="noopener">Find internet and computer offers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="essentials" data-search="texas comprehensive energy assistance program ceap liheap electricity gas utility bill low income energy help all counties">
+          <article class="resource" data-spanish="true" data-category="essentials" data-search="texas comprehensive energy assistance program ceap liheap electricity gas utility bill low income energy help all counties">
             <div class="card-top"><div class="tags"><span class="tag">Texas-wide</span><span class="tag">Utility bills</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h8l-1 8 11-13h-8z"/></svg></div></div>
             <h3>Texas CEAP utility assistance</h3>
             <p>The Comprehensive Energy Assistance Program helps eligible low-income households with immediate energy needs. Local partner agencies serve all 254 Texas counties.</p>
             <a class="card-link" href="https://www.tdhca.texas.gov/comprehensive-energy-assistance-program-ceap" target="_blank" rel="noopener">Review CEAP assistance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="essentials" data-search="tdhca help for texans local provider finder rent rental housing utility bill assistance city county texas">
+          <article class="resource" data-spanish="true" data-category="essentials" data-search="tdhca help for texans local provider finder rent rental housing utility bill assistance city county texas">
             <div class="card-top"><div class="tags"><span class="tag">Texas-wide</span><span class="tag">Local providers</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg></div></div>
             <h3>Help for Texans provider finder</h3>
             <p>Use the Texas Department of Housing and Community Affairs finder to locate local organizations that handle housing, rent and utility-assistance programs.</p>
             <a class="card-link" href="https://www.tdhca.texas.gov/help-for-texans" target="_blank" rel="noopener">Find a local provider <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="essentials" data-search="texas gas service share the warmth winter heating bill assistance financial emergency utility gas county served">
+          <article class="resource" data-spanish="true" data-category="essentials" data-search="texas gas service share the warmth winter heating bill assistance financial emergency utility gas county served">
             <div class="card-top"><div class="tags"><span class="tag">Texas Gas Service areas</span><span class="tag">Heating bills</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c4.4 0 8-3.1 8-7.6 0-3.1-1.8-5.8-5.3-8.4.1 2.3-1 3.8-2.7 4.8.3-3.8-1.6-6.6-4.5-8.8.2 4-3.5 6.8-3.5 12.4C4 18.9 7.6 22 12 22z"/></svg></div></div>
             <h3>Share The Warmth</h3>
             <p>Texas Gas Service connects eligible households facing a financial emergency with partner agencies that may help pay winter heating bills in served counties.</p>
             <a class="card-link" href="https://www.texasgasservice.com/save-money/assistance-programs/share-the-warmth" target="_blank" rel="noopener">Check heating-bill help <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="training" data-search="metrix learning texas workforce commission twc skills enhancement initiative free online courses certification prep 5000 courses english spanish virtual training">
+          <article class="resource" data-spanish="true" data-category="training" data-search="metrix learning texas workforce commission twc skills enhancement initiative free online courses certification prep 5000 courses english spanish virtual training">
             <div class="card-top"><div class="tags"><span class="tag">Texas-wide</span><span class="tag">Free</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg></div></div>
             <h3>Metrix Learning (Texas Workforce Commission)</h3>
             <p>Free online courses and certification prep for all Texans through TWC's Skills Enhancement Initiative — 5,000+ courses, 30–60 minutes each, available in English and Spanish.</p>
             <a class="card-link" href="https://www.workforcesolutionsalamo.org/virtualtraining/" target="_blank" rel="noopener">Start free virtual training <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="training jobs" data-search="goodwill houston free job readiness career training google it support certificate microsoft office construction nccer hvac heat pump solar career centers job placement greater houston">
+          <article class="resource" data-spanish="true" data-category="training jobs" data-search="goodwill houston free job readiness career training google it support certificate microsoft office construction nccer hvac heat pump solar career centers job placement greater houston">
             <div class="card-top"><div class="tags"><span class="tag">Greater Houston</span><span class="tag">Free services</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div></div>
             <h3>Goodwill Houston</h3>
             <p>Free job readiness programs, career training (Google IT Support certificate, Microsoft Office, construction/NCCER, HVAC heat pump, solar), career centers, and job placement across Greater Houston.</p>
@@ -447,14 +492,14 @@
             <a class="card-link" href="https://skillpointalliance.org/" target="_blank" rel="noopener">Explore Skillpoint Alliance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="food" data-search="heights interfaith ministries him food pantry houston heights free food distribution produce eggs toiletries thursdays saturdays all zip codes houston food bank agency">
+          <article class="resource" data-spanish="true" data-category="food" data-search="heights interfaith ministries him food pantry houston heights free food distribution produce eggs toiletries thursdays saturdays all zip codes houston food bank agency">
             <div class="card-top"><div class="tags"><span class="tag">Houston Heights</span><span class="tag">Food help</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10h16"/><path d="M6 10v9h12v-9"/><path d="M8 6c0-2 2-3 4-3s4 1 4 3"/><path d="M9 14h6"/></svg></div></div>
             <h3>Heights Interfaith Ministries Food Pantry</h3>
             <p>Free food distribution in the Houston Heights — pantry staples, fresh produce, eggs, and basic toiletries. Open Thursdays 4–6 PM and Saturdays 10 AM–12 PM; serves all Houston-area ZIP codes. An agency of the Houston Food Bank, operating since 2009.</p>
             <a class="card-link" href="https://himfoodpantry.org/" target="_blank" rel="noopener">Visit the pantry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="training jobs" data-search="job corps free residential career training education low income young adults ages 16 24 texas campuses manufacturing health care technology construction no cost no student debt department of labor">
+          <article class="resource" data-spanish="true" data-category="training jobs" data-search="job corps free residential career training education low income young adults ages 16 24 texas campuses manufacturing health care technology construction no cost no student debt department of labor">
             <div class="card-top"><div class="tags"><span class="tag">Ages 16–24</span><span class="tag">No cost</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div></div>
             <h3>Job Corps — free residential career training</h3>
             <p>The nation's largest free residential career training and education program for low-income young adults ages 16–24. With 120+ campuses nationwide, including Texas centers, Job Corps offers hands-on training across 10 in-demand industries — manufacturing, health care, technology, construction, and more — plus career support, all at no cost and no student debt.</p>
@@ -468,7 +513,7 @@
             <a class="card-link" href="https://meritamerica.org/" target="_blank" rel="noopener">Explore Merit America tracks <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="training jobs" data-search="texas workforce commission twc find registered apprenticeship training programs paid earn while learning skilled trade healthcare construction it manufacturing department of labor certificate apply texas-wide">
+          <article class="resource" data-spanish="true" data-category="training jobs" data-search="texas workforce commission twc find registered apprenticeship training programs paid earn while learning skilled trade healthcare construction it manufacturing department of labor certificate apply texas-wide">
             <div class="card-top"><div class="tags"><span class="tag">Texas-wide</span><span class="tag">Earn while learning</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5-5L7.4 3.6l3 3 2.3-2.3a4 4 0 0 0 2 2z"/><path d="m5 11-3 3 8 8 3-3"/><path d="m13 19 6-6"/><path d="m16 16 4 4"/></svg></div></div>
             <h3>Find Registered Apprenticeship Training Programs — Texas Workforce Commission</h3>
             <p>Registered Apprenticeships are like real jobs: you start getting paid from day one while learning a skilled trade from experienced workers, with related classroom instruction on the side. Paths span healthcare, construction, IT, manufacturing and more; finishers earn a nationally recognized U.S. Department of Labor certificate. The page lays out the minimum qualifications and a 5-step path: pick a trade, find and contact a program, apply, sign your training agreement, complete training.</p>
@@ -489,21 +534,21 @@
             <a class="card-link" href="https://www.yearup.org/" target="_blank" rel="noopener">Explore Year Up United pathways <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="jobs" data-search="bakerripley free workforce education services houston greater houston career development jobs adult education computer classes childcare head start small business tax help utility assistance food assistance community centers nonprofit">
+          <article class="resource" data-spanish="true" data-category="jobs" data-search="bakerripley free workforce education services houston greater houston career development jobs adult education computer classes childcare head start small business tax help utility assistance food assistance community centers nonprofit">
             <div class="card-top"><div class="tags"><span class="tag">Greater Houston</span><span class="tag">Free services</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div></div>
             <h3>BakerRipley — free workforce &amp; education services (Houston)</h3>
             <p>One of the Houston region's largest nonprofits (119+ years) — free community centers across Greater Houston offering career development and job services, adult education, computer classes, childcare and Head Start, small business support, free tax help, and utility and food assistance.</p>
             <a class="card-link" href="https://www.bakerripley.org/" target="_blank" rel="noopener">Explore BakerRipley programs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="training" data-search="freecodecamp free coding certifications learn to code online responsive web design javascript python relational databases sql projects final exam resume linkedin nonprofit self paced">
+          <article class="resource" data-spanish="true" data-category="training" data-search="freecodecamp free coding certifications learn to code online responsive web design javascript python relational databases sql projects final exam resume linkedin nonprofit self paced">
             <div class="card-top"><div class="tags"><span class="tag">Online</span><span class="tag">Free</span><span class="tag">Certificates</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></div></div>
             <h3>freeCodeCamp — free coding certifications</h3>
             <p>A nonprofit, self-paced online platform where anyone can learn to code for free and earn free verified certifications in areas like Responsive Web Design, JavaScript, Python, and Relational Databases/SQL — by building projects and passing a final exam. Certificates can be added to a résumé or LinkedIn.</p>
             <a class="card-link" href="https://www.freecodecamp.org" target="_blank" rel="noopener">Start learning to code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
           </article>
 
-          <article class="resource" data-category="essentials" data-search="your texas benefits apply texas benefits snap food benefits medicaid chip tanf cash help texas health human services hhs application status renew upload documents 211">
+          <article class="resource" data-spanish="true" data-category="essentials" data-search="your texas benefits apply texas benefits snap food benefits medicaid chip tanf cash help texas health human services hhs application status renew upload documents 211">
             <div class="card-top"><div class="tags"><span class="tag">Texas-wide</span><span class="tag">Benefits help</span></div><div class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></div></div>
             <h3>Your Texas Benefits — apply for Texas benefits</h3>
             <p>The official Texas Health and Human Services portal where Texans can apply for and manage SNAP food benefits, Medicaid and CHIP health coverage, and TANF cash help in one place — upload documents, check application status, and renew benefits. Need help? Call 2-1-1 by phone.</p>
@@ -530,6 +575,38 @@
         </div>
       </div>
     </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title">Contact Us</h2>
+        <p class="contact-intro">Questions, a resource to suggest, or a broken link to report? Send us a message below and we'll get back to you by email.</p>
+        <form class="contact-form" action="https://formsubmit.co/wjohnson1512@gmail.com" method="POST">
+          <input type="hidden" name="_next" value="https://gwenhill.pages.dev/?contact=thanks" />
+          <input type="hidden" name="_subject" value="New message from the GwenHill Resource Center website" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="field">
+            <label for="contactReason">Reason for contacting us</label>
+            <select id="contactReason" name="reason" required>
+              <option value="" disabled selected>Choose a reason</option>
+              <option value="General question">General question</option>
+              <option value="Suggest a new resource">Suggest a new resource</option>
+              <option value="Question about 1-on-1 consultations">Question about 1-on-1 consultations</option>
+              <option value="Report a broken link or issue">Report a broken link or issue</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="contactName">Your name</label>
+            <input id="contactName" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="contactEmail">Email (best form of contact)</label>
+            <input id="contactEmail" name="email" type="email" autocomplete="email" required />
+          </div>
+          <button class="contact-submit" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -547,6 +624,8 @@
   <script>
     (function () {
       var activeFilter = 'all';
+      var spanishOnly = false;
+      var spanishToggle = document.getElementById('spanishToggle');
       var searchInput = document.getElementById('searchInput');
       var resetButton = document.getElementById('resetButton');
       var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
@@ -564,7 +643,8 @@
           var matchesFilter = activeFilter === 'all' || categories.indexOf(activeFilter) !== -1;
           var haystack = (card.textContent + ' ' + card.getAttribute('data-search')).toLowerCase();
           var matchesSearch = !query || haystack.indexOf(query) !== -1;
-          var show = matchesFilter && matchesSearch;
+          var matchesSpanish = !spanishOnly || card.getAttribute('data-spanish') === 'true';
+          var show = matchesFilter && matchesSearch && matchesSpanish;
           card.hidden = !show;
           if (show) visible += 1;
         });
@@ -579,15 +659,41 @@
           update();
         });
       });
+      spanishToggle.addEventListener('click', function () {
+        spanishOnly = !spanishOnly;
+        spanishToggle.setAttribute('aria-pressed', spanishOnly ? 'true' : 'false');
+        update();
+      });
       searchInput.addEventListener('input', update);
       resetButton.addEventListener('click', function () {
         activeFilter = 'all';
+        spanishOnly = false;
+        spanishToggle.setAttribute('aria-pressed', 'false');
         searchInput.value = '';
         chips.forEach(function (item) { item.setAttribute('aria-pressed', item.getAttribute('data-filter') === 'all' ? 'true' : 'false'); });
         update();
         searchInput.focus();
       });
       update();
+    }());
+  </script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('contact') === 'thanks') {
+        var thanks = document.getElementById('thanksView');
+        var hero = document.querySelector('header.hero');
+        var main = document.getElementById('resources');
+        var footer = document.querySelector('footer');
+        var skip = document.querySelector('.skip-link');
+        if (hero) hero.hidden = true;
+        if (main) main.hidden = true;
+        if (footer) footer.hidden = true;
+        if (skip) skip.hidden = true;
+        if (thanks) thanks.hidden = false;
+        document.title = 'Thank you — GwenHill Resource Center';
+        window.scrollTo(0, 0);
+      }
     }());
   </script>
 </body>
