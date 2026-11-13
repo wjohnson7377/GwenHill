@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>GwenHill Resource Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Public+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --royal: #1d3fae;
+        --royal-deep: #152c7d;
+        --royal-ink: #10215c;
+        --mustard: #e0a408;
+        --mustard-soft: #f7c948;
+        --silver: #8a94a6;
+        --silver-line: #d7dce4;
+        --bg: #fbfcfe;
+        --surface: #ffffff;
+        --surface-alt: #eef2fa;
+        --ink: #1c2434;
+        --ink-soft: #47536b;
+        --pin: #b91c1c;
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --royal: #7ea0ff;
+          --royal-deep: #0d1a3f;
+          --royal-ink: #dbe5ff;
+          --mustard: #f0b41c;
+          --mustard-soft: #f7c948;
+          --silver: #9aa5b8;
+          --silver-line: #333f58;
+          --bg: #0c1220;
+          --surface: #131b30;
+          --surface-alt: #182440;
+          --ink: #edf1f9;
+          --ink-soft: #b3bdd2;
+          --pin: #f87171;
+          color-scheme: dark;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Public Sans", system-ui, sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, .serif { font-family: "Lora", Georgia, serif; }
+
+
+      /* ---------- Site header (mock of the live site) ---------- */
+      .site-header {
+        background: var(--royal-deep);
+        color: #fff;
+      }
+      .site-header .inner {
+        max-width: 1080px; margin: 0 auto; padding: 18px 20px;
+        display: flex; flex-wrap: wrap; align-items: center; gap: 10px 28px;
+      }
+      .wordmark { font-family: "Lora", Georgia, serif; font-weight: 700; font-size: 24px; line-height: 1.15; }
+      .wordmark span { color: var(--mustard-soft); }
+      .wordmark small { display: block; font-family: "Public Sans", sans-serif; font-weight: 500; font-size: 12.5px; color: #c3cfe9; letter-spacing: .04em; }
+      .site-nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 15px; font-weight: 600; }
+      .site-nav a { color: #e6ebf9; text-decoration: none; padding: 4px 0; }
+      .site-nav a:hover { color: var(--mustard-soft); text-decoration: underline; text-underline-offset: 4px; }
+
+      main { max-width: 1080px; margin: 0 auto; padding: 0 20px 56px; }
+
+
+      /* ---------- Welcome ---------- */
+      .welcome { padding: 52px 0 8px; max-width: 760px; }
+      .welcome h1 {
+        font-size: clamp(32px, 5.4vw, 50px);
+        line-height: 1.12; font-weight: 600; margin: 0 0 18px;
+        color: var(--royal-ink);
+      }
+      @media (prefers-color-scheme: dark) { .welcome h1 { color: var(--ink); } }
+      .welcome p { font-size: clamp(17px, 2.4vw, 19.5px); color: var(--ink-soft); margin: 0 0 14px; max-width: 640px; }
+      .welcome p strong { color: var(--ink); }
+
+      /* ---------- The free corner ---------- */
+      .free-corner {
+        margin-top: 28px;
+        max-width: 760px;
+        background: var(--surface-alt);
+        border: 1px solid var(--silver-line);
+        border-left: 6px solid var(--mustard);
+        padding: 22px 26px 20px;
+      }
+      .free-corner .corner-label {
+        display: block;
+        font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+        color: var(--royal); margin-bottom: 8px;
+      }
+      @media (prefers-color-scheme: dark) { .free-corner .corner-label { color: var(--mustard-soft); } }
+      .free-corner blockquote {
+        margin: 0;
+        font-family: "Lora", Georgia, serif; font-style: italic;
+        font-size: clamp(22px, 3.4vw, 30px); line-height: 1.35;
+        color: var(--royal-ink);
+      }
+      @media (prefers-color-scheme: dark) { .free-corner blockquote { color: var(--ink); } }
+      .free-corner p {
+        margin: 10px 0 0; font-size: 15px; color: var(--ink-soft); max-width: 58ch;
+      }
+
+      /* ---------- Who is Gwen? (who she is + why this exists, together) ---------- */
+      .why {
+        margin-top: 40px;
+        background: var(--surface);
+        border: 1px solid var(--silver-line);
+        border-top: 6px solid var(--mustard);
+        padding: clamp(24px, 4.5vw, 44px);
+        display: grid; grid-template-columns: 1fr; gap: 6px;
+        box-shadow: 0 10px 30px rgba(16, 33, 92, .07);
+      }
+      .why h2 {
+        margin: 0 0 6px; font-size: clamp(24px, 3.6vw, 32px);
+        font-weight: 600; color: var(--royal-ink);
+      }
+      @media (prefers-color-scheme: dark) { .why h2 { color: var(--ink); } }
+      .why .name {
+        font-family: "Lora", Georgia, serif; font-style: italic;
+        font-size: clamp(21px, 3.2vw, 27px); line-height: 1.35;
+        color: var(--royal-ink); margin: 8px 0 14px; max-width: 68ch;
+      }
+      @media (prefers-color-scheme: dark) { .why .name { color: var(--mustard-soft); } }
+      .why .spelling {
+        display: block; font-family: "Public Sans", sans-serif; font-style: normal;
+        font-size: 13px; font-weight: 700; letter-spacing: .22em;
+        color: var(--ink-soft); margin-top: 6px;
+      }
+      .why .lede {
+        font-family: "Lora", Georgia, serif; font-style: italic;
+        font-size: clamp(19px, 3vw, 24px); line-height: 1.45; margin: 10px 0 16px;
+      }
+      .why p { margin: 0 0 14px; font-size: 16.5px; color: var(--ink-soft); max-width: 68ch; }
+      .why p strong { color: var(--ink); }
+      .why .sign {
+        margin-top: 8px; display: flex; align-items: center; gap: 14px;
+      }
+      .why .monogram {
+        width: 46px; height: 46px; flex: none; border-radius: 50%;
+        background: var(--royal-deep); color: #fff;
+        display: grid; place-items: center;
+        font-family: "Lora", Georgia, serif; font-weight: 700; font-size: 19px;
+      }
+      @media (prefers-color-scheme: dark) { .why .monogram { background: var(--royal); color: #0d1a3f; } }
+      .why .sign .who { font-size: 14.5px; line-height: 1.4; }
+      .why .sign .who strong { display: block; font-size: 15.5px; }
+
+      /* ---------- Two paths ---------- */
+      .paths { margin-top: 48px; }
+      .paths > h2 {
+        font-size: clamp(24px, 3.6vw, 31px); font-weight: 600; margin: 0 0 6px; color: var(--royal-ink);
+      }
+      @media (prefers-color-scheme: dark) { .paths > h2 { color: var(--ink); } }
+      .paths > p { margin: 0 0 22px; color: var(--ink-soft); font-size: 16.5px; }
+      .path-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+      @media (max-width: 680px) { .path-grid { grid-template-columns: 1fr; } }
+      .path {
+        border-radius: 10px; padding: 30px 28px 28px;
+        display: flex; flex-direction: column; gap: 10px;
+        text-decoration: none;
+      }
+      .path .tag {
+        font-size: 12.5px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+      }
+      .path h3 { font-family: "Lora", Georgia, serif; font-size: 26px; font-weight: 600; margin: 0; line-height: 1.2; }
+      .path p { margin: 0; font-size: 15.5px; flex: 1; }
+      .path .go { font-weight: 800; font-size: 16px; margin-top: 8px; }
+      .path-resources { background: var(--royal-deep); color: #fff; }
+      .path-resources .tag { color: var(--mustard-soft); }
+      .path-resources p { color: #ccd6f2; }
+      .path-resources .go { color: var(--mustard-soft); }
+      .path:hover .go, .path:focus-visible .go { text-decoration: underline; text-underline-offset: 4px; }
+      .path:focus-visible { outline: 3px solid var(--mustard); outline-offset: 3px; }
+
+      /* ---------- Rest-of-site hint ---------- */
+      .continues {
+        margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--silver-line);
+        color: var(--ink-soft); font-size: 15px;
+      }
+      .continues strong { color: var(--ink); }
+      .cat-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+      .cat-row span {
+        border: 1px solid var(--silver-line); border-radius: 6px;
+        padding: 5px 12px; font-size: 13.5px; font-weight: 600; background: var(--surface);
+      }
+
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <header class="site-header">
+      <div class="inner">
+        <div class="wordmark">GwenHill <span>Resource Center</span>
+          <small>FREE HELP · TEXAS &amp; HOUSTON FIRST</small>
+        </div>
+        <nav class="site-nav" aria-label="Site">
+          <a href="https://gwenhill.pages.dev">Resources</a>
+          <a href="#who">Who is Gwen?</a>
+          <a href="https://gwenhill.pages.dev">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1 · Softened welcome -->
+      <section class="welcome" aria-label="Welcome">
+        <h1>Come on in. You're welcome here.</h1>
+        <p>
+          If you're going through a hard season, you don't have to sort it out alone.
+          This is a place to find real help — training, certifications, food, housing,
+          internet, benefits — gathered in one spot so you don't have to hunt for it.
+        </p>
+        <p><strong>Everything here is free. It always will be.</strong> Take your time, look around, and take what you need.</p>
+      </section>
+
+      <!-- 6 · The free corner — right under the welcome, where folks feel it first -->
+      <aside class="free-corner" aria-label="Why this is free">
+        <span class="corner-label">In this corner</span>
+        <blockquote>“This is free because somebody needed it once.”</blockquote>
+        <p>That's the whole reason this place exists — somebody needed help, went looking for it, and built this so the next person could find it.</p>
+      </aside>
+
+      <!-- 2 · Who is Gwen? — who she is and why this exists, in one section -->
+      <section class="why" id="who" aria-label="Who is Gwen?">
+        <h2>Who is Gwen?</h2>
+        <p class="name">
+          Gwen — Gwendolyn Paulhill — was my mother.
+          <span class="spelling" aria-label="Gwendolyn, spelled G W E N D O L Y N">G-W-E-N-D-O-L-Y-N</span>
+        </p>
+        <p>
+          If you've ever wondered where the name on this place comes from, now
+          you know: <strong>it's hers.</strong> The <strong>GwenHill Resource
+          Center</strong> is named in her honor — Gwen from her name, and Hill
+          from Paulhill — so her name is the first thing you meet when you come
+          here looking for help. Who she was and why this place exists go hand
+          in hand, and they belong together, right here.
+        </p>
+        <p>
+          My mother was a single parent who worked hard every single day of
+          her life. I honestly can't remember a moment when I didn't see her
+          working hard — that was just who she was. She carried our family on
+          her own, and she did it without ever letting up.
+        </p>
+        <p>
+          Everything I know about being a good person, I learned from her.
+          She taught me manners and values. She taught me what it means to
+          respect yourself, to try hard, to work hard, and to never give up.
+          But most importantly, she taught me to be true to my family — and
+          to be a good person, through and through. She raised me, and I
+          could not have asked for a better mother. I could not have been
+          blessed with a better parent.
+        </p>
+        <p>
+          I want people to know she went through real struggles, because I
+          saw them with my own eyes. I saw her fall, and I saw her pick
+          herself back up and go right back to working hard — and she did
+          that with no help at all. She never asked for anything. And even
+          at her lowest, she never let herself stay down. She never let
+          herself fall for good.
+        </p>
+        <p>
+          That's why I say this plainly: <strong>my values come from her.
+          My ethic comes from her. My work ethic comes from her. My
+          everything comes from her. She is the birth of all of this.</strong>
+        </p>
+        <p class="lede">“This hub was built out of my trials and tribulations.”</p>
+        <p>
+          This place was built out of my own trials and tribulations. Going
+          through them taught me, firsthand, what it takes to move forward —
+          and what kind of help you actually need when you're trying to. I
+          came to know what was needed because I needed it myself: one place,
+          no runaround, just real help you could actually find when you went
+          looking for it. And I knew if I needed it, there were others out
+          there needing it just as much. So that's what I'm trying to give
+          them. Nobody should have to get back up with no help at all, the
+          way my mother so often did — not if there's a way to stand beside
+          them.
+        </p>
+        <p>
+          So I built the thing I wished I'd had, and I put my mother's name
+          on it. That's what the GwenHill Resource Center is: her strength,
+          turned outward. The training, the certifications, the food,
+          housing, internet, and benefits gathered here — all of it is
+          <strong>free help and free resources for people who need them</strong>,
+          given the way she lived: with hard work, with dignity, and without
+          asking anything in return. I want this place to <strong>really help
+          people</strong>, and I want it to stay <strong>completely free</strong>.
+          I know that's hard for people to believe these days. Everything
+          seems to come with a catch, a fee, and another catch behind the fee.
+          Not here.
+        </p>
+        <p><strong>Sometimes you just help because you want to help. That's reason enough.</strong></p>
+        <p>
+          <strong>That's who Gwen is, and that's how GwenHill came to be</strong> —
+          her name and her example, standing together at the door to welcome
+          you in, and to make sure you don't have to face a hard season
+          without help the way she so often did.
+        </p>
+        <div class="sign">
+          <div class="monogram" aria-hidden="true">W</div>
+          <div class="who">
+            <strong>William</strong>
+            Founder, GwenHill Resource Center — named for my mom, Gwendolyn Paulhill
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 · Start here -->
+      <section class="paths" id="paths" aria-label="Get help">
+        <h2>Where do you want to start?</h2>
+        <p>Everything here is free. Start with the resources.</p>
+        <div class="path-grid">
+          <a class="path path-resources" href="https://gwenhill.pages.dev">
+            <span class="tag">Get Help Now</span>
+            <h3>Browse the Resources</h3>
+            <p>
+              All 41 free resources in one place — education, certifications, job
+              training, food, housing &amp; utilities, internet, and benefits.
+              Texas and Houston first, in English and Spanish.
+            </p>
+            <span class="go">Find a resource →</span>
+          </a>
+        </div>
+      </section>
+
+      <div class="continues">
+        <strong>Below this, the other categories stay just as they are</strong> —
+        Education, Food, Housing &amp; Utilities, Internet, and Benefits, plus the
+        Spanish-language filter, the Contact page, and the “Support this hub” link
+        all carry on unchanged.
+        <div class="cat-row" aria-hidden="true">
+          <span>Education</span><span>Certifications</span><span>Job Training</span>
+          <span>Food</span><span>Housing &amp; Utilities</span><span>Internet</span>
+          <span>Benefits</span><span>En español</span>
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+</html>
