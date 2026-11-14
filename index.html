@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="google-site-verification" content="W3hOKhr1TDDY7ze14b2oDdr0h8HvrZ5LfLOO0-pPhto" />
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#eceef0" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0f141c" media="(prefers-color-scheme: dark)" />
@@ -228,6 +229,78 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; }
     }
+
+    /* ---------- Welcome + free corner + Who is Gwen? ----------
+       Merged Nov 13 from the approved Nov 10 corner preview (scrubbed file),
+       adapted to this page's palette. archived-site-free. */
+    .gwen-intro { background: var(--paper); border-bottom: 1px solid var(--line); }
+    .gwen-intro .wrap { padding-top: 44px; padding-bottom: 52px; }
+    .welcome { padding: 8px 0; max-width: 760px; }
+    .welcome h2.welcome-title {
+      font-family: "Newsreader", serif;
+      font-size: clamp(2rem, 4.5vw, 3.1rem);
+      line-height: 1.12; font-weight: 650; letter-spacing: -.02em;
+      margin: 0 0 18px; color: var(--green-dark);
+    }
+    .welcome p { font-size: clamp(1.05rem, 1.6vw, 1.22rem); color: var(--muted); margin: 0 0 14px; max-width: 640px; line-height: 1.55; }
+    .welcome p strong { color: var(--ink); }
+    .free-corner {
+      margin-top: 28px; max-width: 760px;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--orange);
+      padding: 22px 26px 20px;
+    }
+    .free-corner .corner-label {
+      display: block; font-size: .75rem; font-weight: 800; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 8px;
+    }
+    @media (prefers-color-scheme: dark) { .free-corner .corner-label { color: var(--orange); } }
+    .free-corner blockquote {
+      margin: 0; font-family: "Newsreader", serif; font-style: italic;
+      font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.35; color: var(--green-dark);
+    }
+    @media (prefers-color-scheme: dark) { .free-corner blockquote { color: var(--ink); } }
+    .free-corner p { margin: 10px 0 0; font-size: .95rem; color: var(--muted); max-width: 58ch; line-height: 1.55; }
+    .why {
+      margin-top: 40px; background: var(--surface);
+      border: 1px solid var(--line); border-top: 6px solid var(--orange);
+      padding: clamp(24px, 4.5vw, 44px);
+      display: grid; grid-template-columns: 1fr; gap: 6px;
+      box-shadow: var(--shadow);
+    }
+    .why h2 {
+      margin: 0 0 6px; font-family: "Newsreader", serif;
+      font-size: clamp(1.5rem, 3.6vw, 2rem); font-weight: 650; color: var(--green-dark);
+    }
+    @media (prefers-color-scheme: dark) { .why h2 { color: var(--ink); } }
+    .why .name {
+      font-family: "Newsreader", serif; font-style: italic;
+      font-size: clamp(1.3rem, 3.2vw, 1.7rem); line-height: 1.35;
+      color: var(--green-dark); margin: 8px 0 14px; max-width: 68ch;
+    }
+    @media (prefers-color-scheme: dark) { .why .name { color: var(--orange); } }
+    .why .spelling {
+      display: block; font-style: normal;
+      font-size: .82rem; font-weight: 700; letter-spacing: .22em;
+      color: var(--muted); margin-top: 6px;
+    }
+    .why .lede {
+      font-family: "Newsreader", serif; font-style: italic;
+      font-size: clamp(1.2rem, 3vw, 1.5rem); line-height: 1.45; margin: 10px 0 16px;
+    }
+    .why p { margin: 0 0 14px; font-size: 1.03rem; color: var(--muted); max-width: 68ch; line-height: 1.6; }
+    .why p strong { color: var(--ink); }
+    .why .sign { margin-top: 8px; display: flex; align-items: center; gap: 14px; }
+    .why .monogram {
+      width: 46px; height: 46px; flex: none; border-radius: 50%;
+      background: var(--green-dark); color: #fff;
+      display: grid; place-items: center;
+      font-family: "Newsreader", serif; font-weight: 700; font-size: 1.2rem;
+    }
+    @media (prefers-color-scheme: dark) { .why .monogram { background: var(--green); color: #0f1a2e; } }
+    .why .sign .who { font-size: .92rem; line-height: 1.4; }
+    .why .sign .who strong { display: block; font-size: .97rem; }
   </style>
 </head>
 <body>
@@ -241,7 +314,7 @@
   </div>
   <header class="hero">
     <div class="wrap">
-      <div class="utility-row"><span class="site-name">GwenHill Resource Center</span><span class="utility-right"><a class="nav-link" href="#contact">Contact Us</a><span class="reviewed">Starting with Houston + Texas</span><a class="kofi-btn" href="https://ko-fi.com/gwenhill" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>Support this hub</a></span></div>
+      <div class="utility-row"><span class="site-name">GwenHill Resource Center</span><span class="utility-right"><a class="nav-link" href="#who">Who is Gwen?</a><a class="nav-link" href="#contact">Contact Us</a><span class="reviewed">Starting with Houston + Texas</span><a class="kofi-btn" href="https://ko-fi.com/gwenhill" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>Support this hub</a></span></div>
       <div class="hero-grid">
         <div>
           <h1>What do you need help with today?</h1>
@@ -258,6 +331,113 @@
       </div>
     </div>
   </header>
+
+  <section class="gwen-intro" aria-label="Welcome and Who is Gwen?">
+    <div class="wrap">
+<!-- 1 · Softened welcome -->
+      <section class="welcome" aria-label="Welcome">
+        <h2 class="welcome-title">Come on in. You're welcome here.</h2>
+        <p>
+          If you're going through a hard season, you don't have to sort it out alone.
+          This is a place to find real help — training, certifications, food, housing,
+          internet, benefits — gathered in one spot so you don't have to hunt for it.
+        </p>
+        <p><strong>Everything here is free. It always will be.</strong> Take your time, look around, and take what you need.</p>
+      </section>
+
+      <!-- 6 · The free corner — right under the welcome, where folks feel it first -->
+      <aside class="free-corner" aria-label="Why this is free">
+        <span class="corner-label">In this corner</span>
+        <blockquote>“This is free because somebody needed it once.”</blockquote>
+        <p>That's the whole reason this place exists — somebody needed help, went looking for it, and built this so the next person could find it.</p>
+      </aside>
+
+      <!-- 2 · Who is Gwen? — who she is and why this exists, in one section -->
+      <section class="why" id="who" aria-label="Who is Gwen?">
+        <h2>Who is Gwen?</h2>
+        <p class="name">
+          Gwen — Gwendolyn Paulhill — was my mother.
+          <span class="spelling" aria-label="Gwendolyn, spelled G W E N D O L Y N">G-W-E-N-D-O-L-Y-N</span>
+        </p>
+        <p>
+          If you've ever wondered where the name on this place comes from, now
+          you know: <strong>it's hers.</strong> The <strong>GwenHill Resource
+          Center</strong> is named in her honor — Gwen from her name, and Hill
+          from Paulhill — so her name is the first thing you meet when you come
+          here looking for help. Who she was and why this place exists go hand
+          in hand, and they belong together, right here.
+        </p>
+        <p>
+          My mother was a single parent who worked hard every single day of
+          her life. I honestly can't remember a moment when I didn't see her
+          working hard — that was just who she was. She carried our family on
+          her own, and she did it without ever letting up.
+        </p>
+        <p>
+          Everything I know about being a good person, I learned from her.
+          She taught me manners and values. She taught me what it means to
+          respect yourself, to try hard, to work hard, and to never give up.
+          But most importantly, she taught me to be true to my family — and
+          to be a good person, through and through. She raised me, and I
+          could not have asked for a better mother. I could not have been
+          blessed with a better parent.
+        </p>
+        <p>
+          I want people to know she went through real struggles, because I
+          saw them with my own eyes. I saw her fall, and I saw her pick
+          herself back up and go right back to working hard — and she did
+          that with no help at all. She never asked for anything. And even
+          at her lowest, she never let herself stay down. She never let
+          herself fall for good.
+        </p>
+        <p>
+          That's why I say this plainly: <strong>my values come from her.
+          My ethic comes from her. My work ethic comes from her. My
+          everything comes from her. She is the birth of all of this.</strong>
+        </p>
+        <p class="lede">“This hub was built out of my trials and tribulations.”</p>
+        <p>
+          This place was built out of my own trials and tribulations. Going
+          through them taught me, firsthand, what it takes to move forward —
+          and what kind of help you actually need when you're trying to. I
+          came to know what was needed because I needed it myself: one place,
+          no runaround, just real help you could actually find when you went
+          looking for it. And I knew if I needed it, there were others out
+          there needing it just as much. So that's what I'm trying to give
+          them. Nobody should have to get back up with no help at all, the
+          way my mother so often did — not if there's a way to stand beside
+          them.
+        </p>
+        <p>
+          So I built the thing I wished I'd had, and I put my mother's name
+          on it. That's what the GwenHill Resource Center is: her strength,
+          turned outward. The training, the certifications, the food,
+          housing, internet, and benefits gathered here — all of it is
+          <strong>free help and free resources for people who need them</strong>,
+          given the way she lived: with hard work, with dignity, and without
+          asking anything in return. I want this place to <strong>really help
+          people</strong>, and I want it to stay <strong>completely free</strong>.
+          I know that's hard for people to believe these days. Everything
+          seems to come with a catch, a fee, and another catch behind the fee.
+          Not here.
+        </p>
+        <p><strong>Sometimes you just help because you want to help. That's reason enough.</strong></p>
+        <p>
+          <strong>That's who Gwen is, and that's how GwenHill came to be</strong> —
+          her name and her example, standing together at the door to welcome
+          you in, and to make sure you don't have to face a hard season
+          without help the way she so often did.
+        </p>
+        <div class="sign">
+          <div class="monogram" aria-hidden="true">W</div>
+          <div class="who">
+            <strong>William</strong>
+            Founder, GwenHill Resource Center — named for my mom, Gwendolyn Paulhill
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
 
   <main id="resources">
     <section class="finder-shell" aria-labelledby="finder-title">
